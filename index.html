@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jofax</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        input[type="text"], input[type="email"], button {
+            padding: 8px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="logo-02-768x629.png" alt="Logo" class="logo">
+    <div class="contact-info">
+        <p class="phone-text">Ligue-nos grátis</p>
+        <p class="phone-number">800 781 586</p>
+    </div>
+    <div id="container">
+        <p class="left-text">Renting de impressoras e multifunções para a sua empresa</p>
+        <div class="text-overlay">
+            <p class="left-text2">Desde</p>
+            <p class="left-text3">10€</p><p class="left-text4">por mês</p>
+            <p class="left-text5">*Preço sem IVA. Promoção aplicável apenas a novos clientes</p>
+        </div>
+        <div class="background-image-table"> 
+            <form action="https://formspree.io/f/xbjnywkb" method="post">
+                <input type="text" id="nome_empresa" name="nome_empresa" placeholder="Nome da Empresa"><br>
+        
+                <input type="text" id="nome" name="nome" placeholder="Nome" required>
+                <input type="text" id="apelido" name="apelido" placeholder="Apelido" required><br>
+        
+                <input type="tel" id="telefone" name="telefone" placeholder="Telefone" required>
+                <input type="text" id="codigo_postal" name="codigo_postal" placeholder="Código Postal" required><br>
+        
+                <input type="email" id="email" name="email" placeholder="E-mail" required>
+        
+                <input type="checkbox" id="termos" name="termos">
+                <label for="termos">Agradecemos o seu consentimento para partilhar os seus dados ao abrigo do RGPD</label>
+        
+                <button type="submit">Quero mais informações</button>
+            </form>
+            <p id="aviso" style="color: red;"></p>
+        </div>
+    <script>
+        document.querySelector('form').addEventListener('submit', function (event) {
+            const campos = ['nome_empresa', 'nome', 'apelido', 'telefone', 'codigo_postal', 'email'];
+            let preenchidos = true;
+            campos.forEach(function (campo) {
+                if (!document.getElementById(campo).value) {
+                    preenchidos = false;
+                }
+            });
+            if (!preenchidos) {
+                event.preventDefault();
+                document.getElementById('aviso').textContent = 'Por favor, preencha todos os campos obrigatórios.';
+            }
+        });
+    </script>
+    </div>
+</body>
+
+</html>
