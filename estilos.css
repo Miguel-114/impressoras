@@ -134,6 +134,8 @@ button:hover {
     right: 10px;
     text-align: right;
     color: #fff;
+    display: flex;     
+    align-items: center;
 }
 
 .phone-text {
@@ -154,7 +156,7 @@ button:hover {
 }  
 
 .phone-icon {
-    width: 20px; /* Ajuste conforme necessário */
+    width: 30px; /* Ajuste conforme necessário */
     height: auto;
     margin-right: 5px;
 }
