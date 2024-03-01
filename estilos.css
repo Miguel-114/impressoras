@@ -151,4 +151,10 @@ button:hover {
 .phone-number:hover {
     color: darkblue;
     text-decoration: underline;
-}    
+}  
+
+.phone-icon {
+    width: 20px; /* Ajuste conforme necessário */
+    height: auto;
+    margin-right: 5px;
+}
