@@ -1,5 +1,9 @@
 /* styles.css */
 
+h1{
+    font-size: 2px;
+    width: 2%;
+}
 body {
     display: flex;
     justify-content: center;
